@@ -9,6 +9,7 @@ const  Loader = () =>{
                 <div className={styles.Title}>
                     Loading...
                 </div>
+                
             </div>
 
         </div>

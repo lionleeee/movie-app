@@ -9,11 +9,12 @@ const REST_API_ADDR = axios.create({
     baseURL : "https://api.themoviedb.org/3/",
     params : {
         language : "KO-KR",
+        api_key : "5bf3a23c79422b045fcc7ab7c5a17feb"
     },
 });
 
 export const homeApi = {
-    noePlaying : () : Promise<AxiosResponse<NowPlayingData>> => REST_API_ADDR.get("movie/now_playing"),
+    nowPlaying : () : Promise<AxiosResponse<NowPlayingData>> => REST_API_ADDR.get("movie/now_playing"),
 
     movieDetail :(id:number) : Promise<AxiosResponse<MovieDetailData>> =>
         REST_API_ADDR.get(`movie/${id}`,{
