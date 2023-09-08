@@ -7,6 +7,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import React, {useState, useEffect} from 'react';
+import useInfiniteScroll from "../../utils/useInfiniteScroll";
 
 
 interface MoivePresenterProps {
@@ -48,7 +49,24 @@ const MoivePresenter: React.FC<MoivePresenterProps> = ({
     const [upcomingMovies, setupcomingMovies ] = useState<any[]>([]);
     const [topRatedMovies, settopRatedMovies ] = useState<any[]>([]);
 
+    const page = useInfiniteScroll();
 
+    const getInfiniteApi = async() : Promise<void> =>{
+        if(page !== 1){
+            try{
+                let newMovies : any[] = [];
+                
+
+            }
+            catch{
+
+            }
+        }
+    }
+
+    useEffect(()=>{
+        getInfiniteApi();
+    },[page]);
     
 
     return loading ? (
