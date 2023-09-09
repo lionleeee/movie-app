@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import HomeContainer from "./screens/HomeScreen";
 import ScreenHeader from "./components/Header/ScreenHeader";
 import MovieContainer from "./screens/MovieScreen";
+import DetailContainer from "./screens/DetailScreen";
 
 
 
@@ -18,6 +19,7 @@ const Router : FC = (props) =>{
             <Routes>
                 <Route path="/" Component={HomeContainer}/>
                 <Route path="/movie/*" Component={MovieContainer}/>
+                <Route path="/detail/:id" Component={DetailContainer}/>
             </Routes>
         </div>
     )
