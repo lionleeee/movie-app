@@ -13,6 +13,10 @@ const REST_API_ADDR = axios.create({
     },
 });
 
+
+
+
+
 export const homeApi = {
     nowPlaying : () : Promise<AxiosResponse<NowPlayingData>> => REST_API_ADDR.get("movie/now_playing"),
 
